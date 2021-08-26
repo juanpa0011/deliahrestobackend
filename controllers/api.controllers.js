@@ -32,10 +32,10 @@ const getProductId = (req, res) => {
     });
 };
 const postProduct = (req, res) => {
-    const {nombre, precio, detalle} = req.body;
+    const {nombre, precio, detalle, url} = req.body;
     const sentenceSQL = 'INSERT INTO productos SET ?';
     const pro_id = undefined
-    DB.query(sentenceSQL, [{nombre, precio, detalle}], (err, row) => {
+    DB.query(sentenceSQL, [{nombre, precio, detalle, url}], (err, row) => {
         if (err) {
             console.log(err)
         } else {
@@ -47,10 +47,10 @@ const postProduct = (req, res) => {
 };
 const putProduct = (req, res) => {
     const {id} = req.params;
-    const {nombre, precio} = req.body;
-    const sentenceSQL = 'UPDATE productos SET nombre = ?, precio = ? WHERE id_pro = ?';
+    const {nombre, precio, detalle, url} = req.body;
+    const sentenceSQL = 'UPDATE productos SET nombre = ?, precio = ?, detalle = ?, url = ? WHERE id_pro = ?';
 
-    DB.query(sentenceSQL,[nombre, precio, id],(err, row) => {
+    DB.query(sentenceSQL,[nombre, precio, detalle, url, id],(err, row) => {
         if (err) {
             console.log(err);
         } else {

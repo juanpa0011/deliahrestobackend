@@ -8,8 +8,8 @@ router.get('/productos',validateToken, getProducts);
 router.get('/producto/:id_pro',validateToken, getProductId);
 // ADMIN -- CREATE, MOD, DELETE PRODUCTS OVER THE DB
 router.post('/productos', checkAdminToken, postProduct);
-router.put('/productos/:id', checkAdminToken, putProduct);
-router.delete('/productos/:id', checkAdminToken, deleteProduct);
+router.put('/productos/:id_pro', checkAdminToken, putProduct);
+router.delete('/productos/:id_pro', checkAdminToken, deleteProduct);
 // LOGIN AND REGISTER
 router.post('/login', queryUsername, queryPassword ,authorization);
 router.post('/register', checkUsername, checkPassword, checkEmail, checkDir, checkTel, checkNombApe, registerUser);

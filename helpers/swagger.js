@@ -2,9 +2,9 @@ const options = {
     definition: {
         openapi: "3.0.0",
         info: {
-            title: "APIs, Nuevo Intento",
+            title: "Deliah Resto APIs",
             version: "1.0.0",
-            description: "Una gran descripcion",
+            description: "All the ends points by Swaggers",
         },
         servers: [
             {
@@ -14,11 +14,9 @@ const options = {
     },
     apis: [ __dirname + "/*.js" ],
 }
-
 // API - COMPONENTS - ( SCHEMAS - PARAMETERS)
 {
 /** 
- * 
  * @openapi
  * security:
  *  - bearerAuth: []
@@ -212,6 +210,8 @@ const options = {
  * @openapi
  * /productos:
  *      post:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Add new product to Products List
  *          tags: [ Productos ]
  *          requestBody:
@@ -237,6 +237,8 @@ const options = {
  * @openapi
  * /productos/{id_pro}:
  *      put:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Mod an existant product by ID
  *          tags: [ Productos ]
  *          parameters:
@@ -266,6 +268,8 @@ const options = {
  * @openapi
  * /productos/{id_pro}:
  *      delete:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Delete an existant product by ID
  *          tags: [ Productos ]
  *          parameters:
@@ -293,6 +297,8 @@ const options = {
  * @openapi
  * /pedidos:
  *      get:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Returns list of all pedidos
  *          tags: [ Pedidos ]
  *          responses:
@@ -312,13 +318,38 @@ const options = {
      * @openapi
      * /pedidos/{id_ped}:
      *      get:
+     *          security:
+     *               - bearerAuth: []
      *          summary: Return a Pedido given an ID
      *          tags: [ Pedidos ]
      *          parameters:
      *            - $ref: '#/components/parameters/Id_ped'
      *          responses:
      *              200:
-     *                  description: Producto por ID
+     *                  description: Pedido por ID
+     *                  content:
+     *                      application/json:
+     *                          schema:
+     *                              $ref: '#/components/schemas/Pedidos'
+     *              404:
+     *                  description: No se encuentra el Pedido
+     */
+}
+// API - GET PEDIDOS {id_user}
+{
+    /**
+     * @openapi
+     * /pedidos/{id_user}:
+     *      get:
+     *          security:
+     *               - bearerAuth: []
+     *          summary: Return a Pedido given an ID (User Id)
+     *          tags: [ Pedidos ]
+     *          parameters:
+     *            - $ref: '#/components/parameters/Id_ped'
+     *          responses:
+     *              200:
+     *                  description: Pedido por ID
      *                  content:
      *                      application/json:
      *                          schema:
@@ -333,7 +364,7 @@ const options = {
  * @openapi
  * /pedidos:
  *      post:
- *          summary: Add a new Pedido
+ *          summary: Add a new Pedido - User Only
  *          tags: [ Pedidos ]
  *          requestBody:
  *                  required: true
@@ -358,6 +389,8 @@ const options = {
      * @openapi
      * /Pedidos/{id_ped}:
      *      put:
+     *          security:
+     *              - bearerAuth: []
      *          summary: Mod the status of an existant pedidos by ID
      *          tags: [ Pedidos ]
      *          parameters:
@@ -389,6 +422,8 @@ const options = {
      * @openapi
      * /pedidos/{id_ped}:
      *      delete:
+     *          security:
+     *               - bearerAuth: []
      *          summary: Delete an existant product by ID
      *          tags: [ Pedidos ]
      *          parameters:
@@ -416,6 +451,8 @@ const options = {
  * @openapi
  * /usuarios:
  *      get:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Returns list of all Users
  *          tags: [ Usuarios ]
  *          responses:
@@ -437,18 +474,19 @@ const options = {
  * @openapi
  * /usuarios/login:
  *      post:
+ *          summary: Login
  *          tags: [ Usuarios ]
- *      summary: Login
- *      requestBody:
- *          description: ''
- *          content:
- *              application/json:
- *                  schema:
- *                      $ref: '#/components/schemas/Login'
- *                  example:
- *                      username: Username
- *                      password: password
- *          requiered: true
+ *  
+ *          requestBody:
+ *              description: ''
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Login'
+ *                      example:
+ *                          username: Username
+ *                          password: password
+ *              requiered: true
  *          responses:
  *              403:
  *                  description: 'Acceso denegado'
@@ -465,6 +503,8 @@ const options = {
      * @openapi
      * /usuarios/{id_user}:
      *      get:
+     *          security:
+     *               - bearerAuth: []
      *          summary: Return a User given an ID
      *          tags: [ Usuarios ]
      *          parameters:
@@ -513,6 +553,8 @@ const options = {
  * @openapi
  * /usuarios/{id_user}:
  *      put:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Mod an existant User by ID
  *          tags: [ Usuarios ]
  *          parameters:
@@ -544,6 +586,8 @@ const options = {
  * @openapi
  * /usuarios/{id_user}:
  *      delete:
+ *          security:
+ *               - bearerAuth: []
  *          summary: Delete an existant user by ID
  *          tags: [ Usuarios ]
  *          parameters:
@@ -567,10 +611,7 @@ const options = {
  *                  description: 'Acceso denegado'
  */
 }
-
-
 // CSR MXR SSR
-
 module.exports = {
     options
 }
