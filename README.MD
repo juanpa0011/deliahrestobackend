@@ -63,6 +63,6 @@ Libraries added - <br>
 
     5-I. INSERT INTO `usuarios` (`username`, `nomape`, `email`, `tel`, `password`, `dir`, `role`) VALUES ("Admin", "Administrador", "administrador@hotmail.com", "1166789824", "$2b$10$tFbbChiPlPhnXLDEP0QeJe5sEjZYXcrY1sZ2MDWA8hXihSyYJ958O", "No man's land", "ADM"), ("User", "Usuario", "Usuario@hotmail.com", "1166229824", "$2b$10$tFbbChiPlPhnXLDEP0QeJe5sEjZYXcrY1sZ2MDWA8hXihSyYJ958O", "No man's land", "USER"); 
 
-6. Con la base de datos levantada y algunos datos de prueba podemos comenzar a crear pedidos por medio de los end-points. Como estos necesitan de un paso a paso por la conexion de FKs, recomendaria probarlo con "Request.rest" o Postman.
+6. Con la base de datos levantada y algunos datos de prueba podemos comenzar a crear pedidos por medio de los end-points (recordemos que nodemon tiene que estar corriendo el app.js). Como estos necesitan de un paso a paso por la conexion de FKs, recomendaria probarlo con "Request.rest" o Postman.
 
-7. Para ver la documentacion Swagger, abra un navegador y busque http://localhost:3000/api-docs/ - Para ver el archivo en cuestion, puede revisarlo en la carpeta helpers/swagger.js
+7. Para ver la documentacion Swagger, abra un navegador y busque http://localhost:3000/api-docs/ - Para ver el archivo en cuestion, puede revisarlo en la carpeta helpers/swagger.js (recordemos que nodemon tiene que estar corriendo el app.js)
