@@ -1,25 +1,21 @@
-database utf8mb4_unicode_ci
-Servidor: MariaDB
-Versión del servidor: 10.4.20-MariaDB - mariadb.org binary distribution
-Versión del protocolo: 10
-Usuario: root@localhost
-Conjunto de caracteres del servidor: UTF-8 Unicode (utf8mb4)
-Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/8.0.8
+# Deliah Resto
+### Back-End Server working node.js / MariaDB / request.rest
+<br>
 
-Libraries added -
-    "bcrypt": "^5.0.1",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "helmet": "^4.6.0", ( Not used )
-    "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1",
-    "sequelize": "^6.6.5", ( Not used )
-    "swagger-jsdoc": "^6.1.0", ( API UI requiered )
-    "swagger-ui-express": "^4.1.6" ( API UI requiered )
+Libraries added - <br>
+    "bcrypt": "^5.0.1", <br>
+    "cors": "^2.8.5", <br>
+    "dotenv": "^10.0.0", <br>
+    "express": "^4.17.1", <br>
+    "helmet": "^4.6.0", ( Not used ) <br>
+    "jsonwebtoken": "^8.5.1", <br>
+    "mysql": "^2.18.1",  <br>
+    "sequelize": "^6.6.5", ( Not used ) <br>
+    "swagger-jsdoc": "^6.1.0", ( API UI requiered ) <br>
+    "swagger-ui-express": "^4.1.6" ( API UI requiered ) <br>
 
 
-Orientacion de instalacion -
+### Orientacion de instalacion - <br>
 
 1. Descargar los archivos del repositorio GitHub
 
