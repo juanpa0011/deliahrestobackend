@@ -28,15 +28,7 @@ Libraries added - <br>
 3. Crear el packages json. (npm init) para empezar la descargas de las librerias.
 
 4. Luego empezar la descarga de las librerias necesarias. <br>
-    4-A. Las librerias necesarias son: <br>
-        npm i cors -save <br>
-        npm i bcrypt -save <br>
-        npm i dotenv -save <br>
-        npm i express -save <br>
-        npm i jsonwebtoken -save <br>
-        npm i mysql -save <br>
-        npm i swagger-jsdoc -save <br>
-        npm i swagger-ui-express -save <br>
+        npm install
 
 5. Una vez terminada la instalacion de todas las librerias es momento de crear la base de datos. Crear una base de datos con el nombre "delilah_restov1" <br>
     database utf8mb4_unicode_ci <br>
